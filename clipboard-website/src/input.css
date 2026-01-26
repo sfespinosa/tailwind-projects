@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Bai Jamjuree', ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --breakpoint-small: 480px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 976px;
+  --breakpoint-xlarge: 1440px;
+
+  --color-strongCyan: hsl(171, 66%, 44%);
+  --color-lightBlue: hsl(233, 100%, 69%);
+  --color-darkGrayishBlue: hsl(210, 10%, 33%);
+  --color-grayishBlue: hsl(201, 11%, 66%);
+}
+
+@layer base {
+  h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+}
+
+body {
+  background-image: url('../images/bg-header-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media(max-width: 576px) {
+  body {
+    background-image: url('../images/bg-header-mobile.png');
+  }
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto text-center;
+}
+
+.button-container {
+  @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
