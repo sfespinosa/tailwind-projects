@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Bai Jamjuree', ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: 'Bai Jamjuree', sans-serif;
   
   --breakpoint-small: 480px;
   --breakpoint-medium: 768px;
@@ -18,6 +17,10 @@
 @layer base {
   h3 {
     @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+
+  h5 {
+    @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
   }
 }
 
@@ -42,5 +45,9 @@ body {
 }
 
 .section-paragraph {
-  @apply max-w-3xl mx-auto mb-24 text-xl leading-9 text-center text-grayishBlue;
+  @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%);
 }
